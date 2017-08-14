@@ -1,10 +1,22 @@
-﻿
+﻿@model Fiap.Exemplo01.MVC.Models.Aluno
+
 @{
     ViewBag.Title = "Salvar";
 }
+Usando o viewbag 
+<br />
 <h2>Salvar</h2>
 <h3>@ViewBag.nomeAluno</h3>
 <h3>@ViewBag.dataAluno</h3>
 <h3>@ViewBag.salarioAluno</h3>
 
+<br />
+Usando o tempdata
+<h3>Temp data: @TempData["mensagem"]</h3>
+
+<br />
+Usando o model
+<h3>@Model.Nome</h3>
+<h3>@Model.DataNascimento</h3>
+<h3>@Model.Salario</h3>
 

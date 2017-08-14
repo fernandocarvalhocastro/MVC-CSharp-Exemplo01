@@ -21,10 +21,14 @@ namespace Fiap.Exemplo01.MVC.Controllers
         [HttpPost]
         public ActionResult Salvar(Aluno aluno)
         {
+            //Viewbag não é mantido após o redirect
             ViewBag.nomeAluno = aluno.Nome;
             ViewBag.dataAluno = aluno.DataNascimento;
             ViewBag.salarioAluno = aluno.Salario;
-            return View();
+
+            //Tempdata é mantido após o redirect
+            TempData["mensagem"] = "Aluno Registrado!";
+            return View(aluno);
             //return Content("Gravou!" + aluno.Nome + " - " + aluno.DataNascimento.ToString("dd/MM/yyyy") + " - " + aluno.Salario); //Texto
         }
     }
